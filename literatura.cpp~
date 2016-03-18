@@ -1,0 +1,17 @@
+#include "obra.h"
+#include "literatura.h"
+#include <string>
+#include <sstream>
+
+using std::string;
+using std::stringstream;
+
+Literatura::Literatura(string nombre,string autor,string ingreso,string genero,string epoca): Obra(nombre,autor,ingreso), genero(genero),epoca(epoca){
+}
+Literatura::~Literatura(){
+}
+string Literatura::toStrin() const{
+	stringstream ss;
+	ss << "Literatura\n" << Obra::toString() << "\nGenero: " << genero << "\nEpoca: " << epoca;
+	return ss.str(); 
+};

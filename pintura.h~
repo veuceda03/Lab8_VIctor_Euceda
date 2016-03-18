@@ -1,0 +1,14 @@
+#pragma once
+#include "obra.h"
+#include <string>
+#include <sstream>
+
+class Pintura: public Obra{
+		double peso;
+		string material;
+    public:
+		Pintura(string,string,string,double,string);
+		Pintura(const Pintura&);
+		virtual~Pintura();
+		virtual string toString() const;
+};
