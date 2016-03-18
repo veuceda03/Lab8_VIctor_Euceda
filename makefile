@@ -1,5 +1,5 @@
-main:	main.o obra.o literatura.o escultura.o diseno.o
-	g++ obra.o main.o literatura.o escultura.o diseno.o -o main
+main:	main.o obra.o literatura.o escultura.o diseno.o pintura.o
+	g++ obra.o main.o literatura.o escultura.o diseno.o pintura.o -o main
 	rm *.o
 
 main.o:	main.cpp obra.h 
@@ -16,3 +16,6 @@ escultura.o:	obra.h	obra.cpp escultura.h escultura.cpp
 
 diseno.o:	obra.h	obra.cpp diseno.h diseno.cpp
 	g++ -c diseno.cpp				
+
+pintura.o:	obra.h	obra.cpp pintura.cpp pintura.h
+	g++ -c pintura.cpp
